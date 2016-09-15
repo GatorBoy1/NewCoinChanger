@@ -12,5 +12,12 @@ class TestCoinChanger< Minitest::Test
         assert_equal({dollar_pc:8, fifty_cnt_pc:1, quarter:0, dime:0, nickle:0, penny:0},coin_changer(cents_received))
     end
 
+    def test_returns_6_dollars_and_seventy_five_cents
+        cents_received = 675
+        assert_equal({dollar_pc:6, fifty_cnt_pc:1, quarter:1, dime:0, nickle:0, penny:0},coin_changer(cents_received))
+
+    end
+
+
 
 end

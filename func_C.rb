@@ -24,6 +24,18 @@ def coin_changer(money)
     	money = money - (amount * 50)
   	end
 
+	if money.between?(25,49)
+    	amount = money / 25
+    	coins[:quarter] = amount
+    	money = money - (amount * 25)
+  	end
+
+if money.between?(10,19)
+    	amount = money / 10
+    	coins[:dime] = amount
+    	money = money - (amount * 10)
+  	end
+
 
     coins
 end
