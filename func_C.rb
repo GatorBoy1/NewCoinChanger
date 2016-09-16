@@ -42,5 +42,12 @@ def coin_changer(money)
     	money = money - (amount * 5)
   	end
 
+    if money.between?(1,4)
+        amount = money / 1
+        coins[:penny] = amount
+        money = money - (amount * 1)
+    end
+
+
     coins
 end

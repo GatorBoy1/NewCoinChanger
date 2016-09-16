@@ -24,6 +24,13 @@ def test_returns_4_dollars_and_ninety_cents
 
     end
 
+def test_returns_4_dollars_and_ninety_three_cents
+        cents_received = 493
+        assert_equal({dollar_pc:4, fifty_cnt_pc:1, quarter:1, dime:1, nickel:1, penny:3},coin_changer(cents_received))
+
+    end
+
+
 
 
 
