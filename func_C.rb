@@ -9,7 +9,7 @@
 
 def coin_changer(money)
     amount = 0
-    coins ={dollar_pc:0, fifty_cnt_pc:0, quarter:0, dime:0, nickle:0, penny:0}
+    coins ={dollar_pc:0, fifty_cnt_pc:0, quarter:0, dime:0, nickel:0, penny:0}
     if money.between?(100,999)
         amount = money/100
         coins[:dollar_pc] = amount
@@ -30,12 +30,17 @@ def coin_changer(money)
     	money = money - (amount * 25)
   	end
 
-if money.between?(10,19)
+	if money.between?(10,19)
     	amount = money / 10
     	coins[:dime] = amount
     	money = money - (amount * 10)
   	end
 
+	if money.between?(5,9)
+    	amount = money / 5
+    	coins[:nickel] = amount
+    	money = money - (amount * 5)
+  	end
 
     coins
 end
