@@ -30,7 +30,7 @@ def coin_changer(money)
     	money = money - (amount * 25)
   	end
 
-	if money.between?(10,19)
+	if money.between?(10,24)
     	amount = money / 10
     	coins[:dime] = amount
     	money = money - (amount * 10)
